@@ -90,7 +90,6 @@
                             <!-- ✅ Formulaire avec enctype pour upload d'image -->
                             <form method="POST" action="{{ route('livres.update', $livre->id) }}" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
                                 <div class="modal-body" style="padding: 30px; max-height: 70vh; overflow-y: auto;">
 
                                     <!-- Informations principales -->
