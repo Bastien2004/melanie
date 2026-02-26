@@ -1,0 +1,231 @@
+    /* Base & Thème Cinéma (Sombre) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+/* Réutilisation de tes styles Glassmorphism */
+.header, .actions-bar, .book-card, .empty-state {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.btn {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-primary { background: #e94560; border: none; }
+.btn-primary:hover { background: #ff4d6d; }
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+.actions-bar {
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.book-card {
+    padding: 25px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.book-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.dvd-icon { font-size: 50px; margin-bottom: 15px; display: block; }
+.book-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+.book-author { color: #e94560; font-weight: 500; margin-bottom: 10px; }
+.book-info { font-size: 14px; opacity: 0.7; }
+
+/* Modals style */
+.modal-content {
+    background: #1a1a2e;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color: white;
+}
+.form-control {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+.form-control:focus {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+     /* Styles ajoutés pour les images et les étoiles */
+ .dvd-poster {
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+     border-radius: 12px;
+     margin-bottom: 15px;
+     background: rgba(255, 255, 255, 0.05);
+     transition: transform 0.3s ease;
+ }
+
+.book-card:hover .dvd-poster {
+    transform: scale(1.03);
+}
+
+.rating-stars {
+    color: #f1c40f; /* Couleur Or */
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.modal-poster-view {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.info-label {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 10px;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+ .dvd-poster {
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+     border-radius: 12px;
+     margin-bottom: 15px;
+     background: rgba(255, 255, 255, 0.05);
+     transition: transform 0.3s ease;
+ }
+
+.book-card:hover .dvd-poster {
+    transform: scale(1.03);
+}
+
+.rating-stars {
+    color: #f1c40f;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.modal-poster-view {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.info-label { opacity: 0.6; font-size: 0.9rem; display: block; margin-top: 10px; }
+.info-value { font-size: 1.1rem; font-weight: 500; }
+
+/* Style pour l'input file */
+input[type="file"]::file-selector-button {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+     /* Styles pour la recherche et l'affichage */
+ .search-box {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+ }
+.search-box input {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.btn-clear {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.dvd-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.rating-stars { color: #f1c40f; letter-spacing: 2px; }
+.modal-poster-view { width: 100%; max-height: 450px; object-fit: contain; border-radius: 15px; }
+.info-label { opacity: 0.6; font-size: 0.8rem; display: block; }
+.info-value { font-weight: bold; }
