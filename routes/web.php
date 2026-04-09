@@ -38,11 +38,6 @@ Route::post('/livres', [LivreController::class, 'store'])
     ->name('livres.store');
 
 
-
-
-
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/dvds', [DvdController::class, 'index'])->name('dvds.index');
     Route::post('/dvds', [DvdController::class, 'store'])->name('dvds.store');
